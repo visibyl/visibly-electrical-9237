@@ -1,0 +1,162 @@
+/* === Reset & Base === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: #222;
+  background: #fff;
+  line-height: 1.6;
+}
+
+/* === Topbar === */
+.topbar {
+  background: #0d1b2a;
+  color: #fff;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.topbar-left span,
+.topbar-left a {
+  color: #fff;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.topbar-right a {
+  color: #f5c542;
+  margin: 0 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.topbar-right a:hover {
+  color: #fff;
+}
+
+/* === Navbar === */
+.navbar {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0d1b2a;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #f5c542;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #0d1b2a;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #0d1b2a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #f5c542;
+}
+
+.btn-primary {
+  background: #f5c542;
+  color: #0d1b2a !important;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* === Hero Section === */
+.hero {
+  background: linear-gradient(to right, #0d1b2a, #1b263b);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  color: #f5c542;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 25px;
+  font-size: 1rem;
+}
+
+.hero .btn-primary {
+  background: #f5c542;
+  color: #0d1b2a;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
